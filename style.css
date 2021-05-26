@@ -12,6 +12,16 @@ body {
   box-sizing: inherit;
 }
 
+a {
+  color: #c300ff;
+}
+
+
+a:hover {
+  opacity: 0.6;
+  color: #c300ff;
+}
+
 @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
 
 .text {
