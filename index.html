@@ -3,8 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dissort.css">
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!-- bootstrap CSS  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -13,7 +20,7 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
-
+    
     <!-- bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -29,471 +36,57 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <script src="script.js"></script>
-    <script>
-        (function ($) {
-            $.fn.countdown = function (options, callback) {
-                //custom 'this' selector
-                thisEl = $(this);
-
-                // array of custom settings
-                var settings = {
-                    'date': null,
-                    'format': null
-                };
-
-                // append the settings array to options
-                if (options) {
-                    $.extend(settings, options);
-                }
-
-                //create the countdown processing function
-                function countdown_proc() {
-                    var eventDate = Date.parse(settings.date) / 1000;
-                    var currentDate = Math.floor($.now() / 1000);
-
-                    if (eventDate <= currentDate) {
-                        callback.call(this);
-                        clearInterval(interval);
-                    }
-
-                    var seconds = eventDate - currentDate;
-
-                    var days = Math.floor(seconds / (60 * 60 * 24));
-                    //calculate the number of days
-
-                    seconds -= days * 60 * 60 * 24;
-                    //update the seconds variable with number of days removed
-
-                    var hours = Math.floor(seconds / (60 * 60));
-                    seconds -= hours * 60 * 60;
-                    //update the seconds variable with number of hours removed
-
-                    var minutes = Math.floor(seconds / 60);
-                    seconds -= minutes * 60;
-                    //update the seconds variable with number of minutes removed
-
-                    //conditional statements
-                    if (days == 1) { thisEl.find(".timeRefDays").text("day"); } else { thisEl.find(".timeRefDays").text("days"); }
-                    if (hours == 1) { thisEl.find(".timeRefHours").text("hour"); } else { thisEl.find(".timeRefHours").text("hours"); }
-                    if (minutes == 1) { thisEl.find(".timeRefMinutes").text("minute"); } else { thisEl.find(".timeRefMinutes").text("minutes"); }
-                    if (seconds == 1) { thisEl.find(".timeRefSeconds").text("second"); } else { thisEl.find(".timeRefSeconds").text("seconds"); }
-
-                    //logic for the two_digits ON setting
-                    if (settings.format == "on") {
-                        days = (String(days).length >= 2) ? days : "0" + days;
-                        hours = (String(hours).length >= 2) ? hours : "0" + hours;
-                        minutes = (String(minutes).length >= 2) ? minutes : "0" + minutes;
-                        seconds = (String(seconds).length >= 2) ? seconds : "0" + seconds;
-                    }
-
-                    //update the countdown's html values.
-                    thisEl.find(".days").text(days);
-                    thisEl.find(".hours").text(hours);
-                    thisEl.find(".minutes").text(minutes);
-                    thisEl.find(".seconds").text(seconds);
-                }
-
-                //run the function
-                countdown_proc();
-
-                //loop the function
-                interval = setInterval(countdown_proc, 1000);
-            };
-
-        })(jQuery);
-
-
-
-        //Provide the plugin settings
-        $("#countdown").countdown({
-            //The countdown end date
-            date: "1 January 2022 12:00:00",
-
-            // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
-            format: "on"
-        },
-
-            function () {
-                // This will run when the countdown ends
-                alert("We're Out Now");
-            });
-
-
-        function setHeights() {
-            var windowHeight = $(window).height();
-            $('.slide').height(windowHeight);
-        }
-
-        setHeights();
-
-        $(window).resize(function () {
-            setHeights();
-        });
-
-        function addSticky() {
-            $('.slide').each(function () {
-                var scrollerAnchor = $(this).offset().top;
-                if (window.scrollY >= scrollerAnchor) {
-                    $(this).addClass('fix-it');
-                } else {
-                    $(this).removeClass('fix-it');
-                }
-            });
-        }
-
-        $(window).scroll(function () {
-            addSticky();
-        });
-    </script>
     <title>Document</title>
 </head>
 
-<body>
-    <div class='wrap'>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
-        <div class='c'></div>
+<body id="particle-slider">
+    <div class="slides">
+        <div id="first-slide" class="slide"
+            data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZ4AAACeCAYAAAACC2y7AAAACXBIWXMAAAdiAAAHYgE4epnbAAAEfWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSfvu78nIGlkPSdXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQnPz4KPHg6eG1wbWV0YSB4bWxuczp4PSdhZG9iZTpuczptZXRhLyc+CjxyZGY6UkRGIHhtbG5zOnJkZj0naHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyc+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpBdHRyaWI9J2h0dHA6Ly9ucy5hdHRyaWJ1dGlvbi5jb20vYWRzLzEuMC8nPgogIDxBdHRyaWI6QWRzPgogICA8cmRmOlNlcT4KICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0nUmVzb3VyY2UnPgogICAgIDxBdHRyaWI6Q3JlYXRlZD4yMDIxLTA1LTI1PC9BdHRyaWI6Q3JlYXRlZD4KICAgICA8QXR0cmliOkV4dElkPjZlM2IwN2ZmLTk4MWQtNDhiNi04YTI3LTg3NjkxODUxZDFmMjwvQXR0cmliOkV4dElkPgogICAgIDxBdHRyaWI6RmJJZD41MjUyNjU5MTQxNzk1ODA8L0F0dHJpYjpGYklkPgogICAgIDxBdHRyaWI6VG91Y2hUeXBlPjI8L0F0dHJpYjpUb3VjaFR5cGU+CiAgICA8L3JkZjpsaT4KICAgPC9yZGY6U2VxPgogIDwvQXR0cmliOkFkcz4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PScnCiAgeG1sbnM6ZGM9J2h0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvJz4KICA8ZGM6dGl0bGU+CiAgIDxyZGY6QWx0PgogICAgPHJkZjpsaSB4bWw6bGFuZz0neC1kZWZhdWx0Jz5DaWZlciBGYWNlYm9vayBDb3ZlcjwvcmRmOmxpPgogICA8L3JkZjpBbHQ+CiAgPC9kYzp0aXRsZT4KIDwvcmRmOkRlc2NyaXB0aW9uPgoKIDxyZGY6RGVzY3JpcHRp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">
+        </div>
     </div>
 
-    <div class="container">
-        <!-- <div class="card"> -->
-
-        <div class="main">
-            <div id='content'>
-                <div class='title'>
-                    <span> Cifer </span>
-                </div>
-                <p> Make your privacy <span style="color: blueviolet;">PRIVATE</span> again </p>
-                <br />
-                <section>
-                    <ul id="countdown" style="background-color: black;">
-                        <li><span class="days timenumbers" id="days">01</span>
-                            <p class="timeRefDays timedescription">days</p>
-                        </li>
-                        <li><span class="hours timenumbers" id="hrs">00</span>
-                            <p class="timeRefHours timedescription">hours</p>
-                        </li>
-                        <li><span class="minutes timenumbers" id="min">00</span>
-                            <p class="timeRefMinutes timedescription">minutes</p>
-                        </li>
-                        <li><span class="seconds timenumbers yellow-text" id="sec">00</span>
-                            <p class="timeRefSeconds timedescription">seconds</p>
-                        </li>
-                    </ul>
-                    <p style="margin-top: 0px;">Coming soon</p>
-                </section>
-
-            </div>
+    <canvas class="draw"></canvas>
+    <div class="main">
+        <div id='content'>
+            <p style="color: cornsilk;" id="text"></p>
+            <br />
+            <section>
+                <ul id="countdown">
+                    <li><span class="days timenumbers" id="days">01</span>
+                        <p class="timeRefDays timedescription">days</p>
+                    </li>
+                    <li><span class="hours timenumbers" id="hrs">00</span>
+                        <p class="timeRefHours timedescription">hours</p>
+                    </li>
+                    <li><span class="minutes timenumbers" id="min">00</span>
+                        <p class="timeRefMinutes timedescription">minutes</p>
+                    </li>
+                    <li><span class="seconds timenumbers yellow-text" id="sec">00</span>
+                        <p class="timeRefSeconds timedescription">seconds</p>
+                    </li>
+                </ul>
+                <p style="margin-top: 0px;">Coming soon</p>
+            </section>
             <div class="menu">
-                <div class="label">Follow Us</div>
+                <div class="label">join the community</div>
                 <div class="spacer"></div>
-                <div class="item"><span>Twitter</span></div>
-                <div class="item"><span>Instagram</span></div>
-                <div class="item"><span>Flickr</span></div>
-                <div class="item"><span>Behance</span></div>
-                <div class="item"><span>MixCloud</span></div>
+                <div class="menu-item">
+                    <div class="item"><span><i class="fab fa-twitter"></i></span></div>
+                    <div class="item"><span><i class="fab fa-instagram"></i></span></div>
+                    <div class="item"><span><i class="fab fa-facebook-f"></i></span></div>
+                    <div class="item"><span><i class="fab fa-linkedin-in"></i></span></div>
+                    <div class="item"><span><i class="fab fa-youtube"></i></span></div>
+                    <div class="item"><span><i class="fab fa-reddit"></i></span></div>
+                    <div class="item"><span><i class="fab fa-medium-m"></i></span></div>
+                    <div class="item"><span><i class="fab fa-discord"></i></span></div>
+                </div>
             </div>
         </div>
-        <!-- </div> -->
     </div>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js'></script>
+    <script src="./dissort.js"></script>
+    <script src="textscramble.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,174 @@
+html,
+body {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-top: -9%;
+}
+html .slides,
+body .slides,
+html > .dg,
+body > .dg {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAAAgCAMAAAAmC6asAAAAMFBMVEX19vf19vft7u/19vfp6uv19vfx8vP19vf19vf19vf19vfm5+j19vcAAAD19vfl5udu+MchAAAADnRSTlOIVcIz10StZneZEewiAMEzGswAAAF/SURBVHja7ZXZbsQwCEXjneXa/P/fFntm0uRpVGkaqVX8YAW4cMCxkq1ftW7STbpJP1sJb0lFPkJiekuq4TMkfkti+gxpe0uivRmB9LQOlHraNixnYErPONAfcYZntYfv9aDtJTmUO5OCeukGR5paqZtbGaSVzYWIlZ9DI6vVpC6shJw5TzdlZk47qZpldAkteBVToxNJrLGqoil6MPE9A1bSNorUXPYWvbLUjbg37lwRNPYW6x6eJK4ilB2hVmChJw2nWx4He3Map1exMVFvQyMVN78rlexbY7Gk0tWUm7gsHUnikQ6dwzLRLM/tRKIlGMMFoijmpthqBocLFTLWO41GnhrFXZIGTiTz5pIyA9G4uqSeSV3W4bSsqvycg0x9RTpcKHaHHybNOZBXfPa41jNjLCeqjRopzgI4kXYcsDqVZWJaZwVWHpYBTOuoACCvEpjTC3DFd6/oVV9YmPw+CWsb+H1SxVWkkgkoV5B6ijasXnMjBPIf/u436e+TvgDCaqPX6lO5yQAAAABJRU5ErkJggg==');
+    background-repeat: no-repeat;
+  }
+  body > .dg {
+    display: none;
+  }
+}
+.main {
+  position: fixed;
+  display: grid;
+  width: 100%;
+  top: 45%;
+}
+
+.dribbble {
+  position: fixed;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+}
+.dribbble img {
+  display: block;
+  height: 28px;
+}
+.twitter {
+  position: fixed;
+  display: block;
+  right: 64px;
+  bottom: 14px;
+}
+.twitter svg {
+  width: 32px;
+  height: 32px;
+  fill: #1da1f2;
+}
+
+html .main #content p,
+body .main #content p {
+  color: #e6dbae;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  padding: 0;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+html .main #content p:last-child,
+body .main #content p:last-child {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 3em auto;
+  padding: 0;
+  letter-spacing: 0.1rem;
+}
+html .main #content p:last-child > a,
+body .main #content p:last-child > a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease-in;
+}
+html .main #content p:last-child > a:hover,
+body .main #content p:last-child > a:hover {
+  color: #fff;
+}
+html .main #content section,
+body .main #content section {
+  color: #fff;
+  margin: 0 auto;
+  line-height: 24px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+html .main #content section ul,
+body .main #content section ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+html .main #content section ul li,
+body .main #content section ul li {
+  display: inline-block;
+  margin-right: 2rem;
+  width: 6rem;
+}
+html .main #content section .timenumbers,
+body .main #content section .timenumbers {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+html .main #content section p.timedescription,
+body .main #content section p.timedescription {
+  font-size: 0.5rem;
+  font-variant: small-caps;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 0px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  html,
+  body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-top: -15%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-top: -20%;
+  }
+  html .main #content p,
+  body .main #content p {
+    color: #e6dbae;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 0;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 400px){
+
+  html,
+  body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-top: -50%;
+  }
+} 
