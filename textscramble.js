@@ -5,7 +5,7 @@
 class TextScramble {
     constructor(el) {
       this.el = el;
-      this.chars = '!<>-_\\/[]{}—=+*^?#________';
+      this.chars = '!<>-_\\/[]{}—=+*^?#_____\\/[]{}—____';
       this.update = this.update.bind(this);
     }
     setText(newText) {
@@ -61,21 +61,20 @@ class TextScramble {
   // ——————————————————————————————————————————————————
   
   const phrases = [
-  'THE MOST SECURE',
-  'THE MOST PRIVATE',
+  'THE MOST SECURE,',
+  'THE MOST PRIVATE,',
   'YET THE SIMPLEST ONLINE MESSAGING APP',
-  'EVER BUILT',
-  'NO ADS. NO CREEPY POLICIES,',
+  'EVER BUILT.',
+  'NO ADS, NO CREEPY POLICIES,',
   'NO DATA COLLECTION OR SHARING.',
-  'WE DO NOT EVEN STORE YOUR NUMBER DIRECTLY!',
-  '',
-  'WAIT, THERE ONE MORE SPECIAL BUT OPTIONAL',
-  'IN-APP DOWNLOAD',
+  "WE DON'T EVEN STORE YOUR PHONE NUMBER!",
+  '...',
+  "WAIT, THERE'S ONE MORE SPECIAL",
+  "BUT OPTIONAL IN-APP DOWNLOAD",
   'RELATED TO CRYPTO. BUT,',
   'WAIT AGAIN,',
-  'ALL IN GOOD TIME',
-  '',
-  ''
+  'ALL IN GOOD TIME.',
+  '...'
 ];
   
   
