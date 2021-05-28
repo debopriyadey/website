@@ -306,7 +306,7 @@ span {
   body .main #content p {
     color: #e6dbae;
     font-family: "Quicksand", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0 auto;
     padding: 0;
     letter-spacing: 0.5rem;
@@ -316,14 +316,14 @@ span {
 
 @media only screen and (max-width: 400px) {
   .main {
-    top: 40%;
+    top: 30%;
   }
 
   html .main #content p,
   body .main #content p {
     color: #e6dbae;
     font-family: "Quicksand", sans-serif;
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin: 0 auto;
     padding: 0;
     letter-spacing: 0.5rem;
