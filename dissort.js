@@ -1,9 +1,3 @@
-// Tamino Martinius - All rights reserved
-
-// Copyright © 2013 Tamino Martinius (http://zaku.eu)
-// Copyright © 2013 Particleslider.com (http://particleslider.com
-
-// Terms of usage: http://particleslider.com/legal/license
 
 var init = function(){
     var isMobile = navigator.userAgent &&
