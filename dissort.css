@@ -28,7 +28,7 @@ body > .dg {
   position: fixed;
   display: grid;
   width: 100%;
-  top: 45%;
+  top: 40%;
   z-index: -2;
 }
 
@@ -59,6 +59,25 @@ body > .dg {
   color: #fff;
   top: 10px;
   right: 20px;
+}
+
+.hover {
+  position: fixed;
+  color: #fff;
+  top: 10px;
+  left: 20px; 
+  background-color: darkgrey;
+  border-radius: 30px;
+}
+
+.hover-text {
+  margin: 0 auto !important;
+}
+
+.line {
+  width: 400px;
+  height: 2px;
+  background-color: #fff;
 }
 
 html .main #content p,
@@ -145,7 +164,7 @@ body .main #content section p.timedescription {
     position: fixed;
     display: grid;
     width: 100%;
-    top: 53%;
+    top: 45%;
     z-index: 0;
   }
 }
