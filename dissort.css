@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
+
 html,
 body {
   background-color: transparent;
@@ -68,6 +71,8 @@ body > .dg {
   left: 20px; 
   background-color: darkgrey;
   border-radius: 30px;
+  font-family: 'Yellowtail', cursive;
+  font-family: 'Kirang Haerang', cursive;
 }
 
 .hover-text {
