@@ -33,6 +33,10 @@ a:hover {
   color: #757575;
 }
 
+.encrypt-text {
+  height: 30px;
+}
+
 html .main #content,
 body .main #content {
   width: 100%;
