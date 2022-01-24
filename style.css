@@ -218,6 +218,21 @@ body .main #content section p.timedescription {
   }
 }
 
+
+@media only screen and (max-height: 650px) {
+  html .main #content,
+  body .main #content {
+    top: 0%;
+  }
+}
+
+@media only screen and (max-height: 520px) {
+  html .main #content,
+  body .main #content {
+    top: -10%;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .main {
     top: 30%;
